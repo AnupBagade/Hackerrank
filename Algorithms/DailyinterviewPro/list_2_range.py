@@ -1,11 +1,14 @@
 """
-Given a sorted list of numbers, return a list of strings that represent all of the consecutive numbers.
+Given a sorted list of numbers, return a list of strings that represent
+all of the consecutive numbers.
 
 Example:
 Input: [0, 1, 2, 5, 7, 8, 9, 9, 10, 11, 15]
 Output: ['0->2', '5->5', '7->11', '15->15']
-Assume that all numbers will be greater than or equal to 0, and each element can repeat.
+Assume that all numbers will be greater than or equal to 0,
+and each element can repeat.
 """
+
 
 def num_range(num):
     consecutive_start = False
@@ -26,12 +29,12 @@ def num_range(num):
                 if start == num[i]:
                     res[start] = start
                 consecutive_start = False
-    res = [str(i)+'->'+str(v) for i,v in res.items()]
+    res = [str(i)+'->'+str(v) for i, v in res.items()]
     return res
 
 
 if __name__ == '__main__':
     num = input('Please enter list of numbers ')
-    num = list(map(int,num.strip('[]').split(',')))
+    num = list(map(int, num.strip('[]').split(',')))
     res = num_range(num)
     print('List of ranges - {}'.format(res))

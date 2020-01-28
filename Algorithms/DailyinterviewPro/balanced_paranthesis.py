@@ -1,7 +1,11 @@
 """
-magine you are building a compiler. Before running any code, the compiler must check that the parentheses in the program are balanced. Every opening bracket must have a corresponding closing bracket. We can approximate this using strings.
+magine you are building a compiler. Before running any code, the compiler must
+check that the parentheses in the program are balanced. Every opening bracket
+must have a corresponding closing bracket.
+We can approximate this using strings.
 
-Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+Given a string containing just the characters '(', ')', '{', '}', '[' and ']',
+determine if the input string is valid.
 An input string is valid if:
 - Open brackets are closed by the same type of brackets.
 - Open brackets are closed in the correct order.
@@ -16,8 +20,8 @@ def validate_parenthesis(input_str):
         ']': '[',
         '}': '{',
     }
-    brackets_open = ['(','{','[']
-    brackets_close = [')','}',']']
+    brackets_open = ['(', '{', '[']
+    brackets_close = [')', '}', ']']
     l1 = []
     input_str = list(input_str)
     status = True
